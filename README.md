@@ -2,190 +2,185 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>dailybestfinds21 | Best Online Deals</title>
-<meta name="description" content="dailybestfinds21 – Discover hot deals and best products every day.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DailyBestFinds21</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
-
 body{
-  background:#f1f3f6;
+font-family:Arial;
+margin:0;
+background:#f5f5f5;
 }
 
-/* Header */
 header{
-  background:#131921;
-  padding:15px;
-  display:flex;
-  align-items:center;
-  gap:15px;
+background:#000;
+color:#fff;
+text-align:center;
+padding:15px;
 }
 
-.logo{
-  color:#fff;
-  font-size:24px;
-  font-weight:bold;
+/* SEARCH BAR */
+.search-box{
+padding:15px;
+background:white;
+position:sticky;
+top:0;
 }
 
-.logo span{
-  color:#ff9900;
+.search-box input{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
 }
 
-header input{
-  flex:1;
-  padding:10px;
-  border:none;
-  border-radius:4px;
+.container{
+padding:10px;
 }
 
-/* Products */
+/* MOBILE FIRST PRODUCT GRID */
 .products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  padding:20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
 }
 
-.product{
-  position:relative;
-  background:#fff;
-  padding:15px;
-  border-radius:6px;
-  text-align:center;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+.card{
+background:white;
+padding:10px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+text-align:center;
 }
 
-.product img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
+.card img{
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:8px;
 }
 
-/* DEAL BADGES */
-.badge{
-  position:absolute;
-  top:10px;
-  left:10px;
-  padding:6px 10px;
-  color:#fff;
-  font-size:12px;
-  font-weight:bold;
-  border-radius:4px;
-  z-index:10;
-}
-
-/* HOT DEAL animation */
-.hot{
-  background:#ff0000;
-  animation:pulse 1.2s infinite;
-}
-
-/* BEST DEAL animation */
-.best{
-  background:#28a745;
-  animation:bounce 1.5s infinite;
-}
-
-@keyframes pulse{
-  0%{transform:scale(1); box-shadow:0 0 0 rgba(255,0,0,0.7);}
-  50%{transform:scale(1.1); box-shadow:0 0 15px rgba(255,0,0,0.9);}
-  100%{transform:scale(1);}
-}
-
-@keyframes bounce{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-6px);}
-}
-
-.product h3{
-  font-size:16px;
-  margin:10px 0;
+.card h3{
+font-size:15px;
+margin:8px 0;
 }
 
 .price{
-  color:green;
-  font-size:18px;
-  margin-bottom:10px;
+color:green;
+font-weight:bold;
+margin-bottom:8px;
 }
 
 button{
-  width:100%;
-  padding:10px;
-  background:#ff9f00;
-  border:none;
-  border-radius:4px;
-  font-weight:bold;
-  cursor:pointer;
+width:100%;
+background:#ff6600;
+border:none;
+padding:10px;
+color:white;
+border-radius:6px;
+font-size:14px;
 }
 
-button:hover{
-  background:#fb641b;
-  color:#fff;
-}
-
-/* Footer */
 footer{
-  background:#131921;
-  color:#fff;
-  text-align:center;
-  padding:10px;
-  font-size:14px;
+text-align:center;
+padding:15px;
+font-size:14px;
+color:#555;
 }
+
+/* DESKTOP VIEW */
+@media(min-width:768px){
+.products{
+grid-template-columns:repeat(4,1fr);
+}
+}
+
 </style>
+
+<script>
+function searchProducts(){
+let input=document.getElementById('search').value.toLowerCase();
+let cards=document.getElementsByClassName('card');
+
+for(let i=0;i<cards.length;i++){
+let text=cards[i].innerText.toLowerCase();
+
+if(text.includes(input)){
+cards[i].style.display='block';
+}else{
+cards[i].style.display='none';
+}
+}
+}
+</script>
+
 </head>
 
 <body>
 
 <header>
-  <div class="logo">daily<span>bestfinds21</span></div>
-  <input type="text" placeholder="Search hot deals...">
+<h2>DailyBestFinds21</h2>
 </header>
 
-<section class="products">
+<div class="search-box">
+<input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+</div>
 
-  <!-- HOT DEAL PRODUCT -->
-  <div class="product">
-    <div class="badge hot">🔥 HOT DEAL</div>
-    <img src="images/product1.jpg" alt="Hot Deal Product">
-    <h3>Trending Gadget of the Day</h3>
-    <p class="price">₹1,499</p>
-    <a href="YOUR_AFFILIATE_LINK" target="_blank">
-      <button>Buy Now</button>
-    </a>
-  </div>
+<div class="container">
 
-  <!-- BEST DEAL PRODUCT -->
-  <div class="product">
-    <div class="badge best">⭐ BEST DEAL</div>
-    <img src="images/product2.jpg" alt="Best Deal Product">
-    <h3>Best Value Product</h3>
-    <p class="price">₹2,999</p>
-    <a href="YOUR_AFFILIATE_LINK" target="_blank">
-      <button>Check Price</button>
-    </a>
-  </div>
+<div class="products">
 
-  <!-- NORMAL PRODUCT -->
-  <div class="product">
-    <img src="images/product3.jpg" alt="Daily Best Find">
-    <h3>Daily Best Find</h3>
-    <p class="price">₹1,199</p>
-    <a href="YOUR_AFFILIATE_LINK" target="_blank">
-      <button>View Offer</button>
-    </a>
-  </div>
+<div class="card">
+<img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/j/v/4/-original-imahgcsbgtyr3ygg.jpeg?q=90">
+<h3>Sneakers</h3>
+<div class="price">₹909</div>
+<a href="https://fkrt.co/4EMFG7"><button>Buy Now</button></a>
+</div>
 
-</section>
+<div class="card">
+<img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/6/4/y/9-arow099-sneaker-09-9-onmac-enterprises-white-original-imahhhnuebfvywxs.jpeg?q=90">
+<h3>sneakers shoes</h3>
+<div class="price">₹498</div>
+<a href="https://fkrt.co/8b3oBT"><button>Buy Now</button></a>
+</div>
+
+<div class="card">
+<img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/6/3/e/-original-imahgaz5fzfzz5js.jpeg?q=90">
+<h3>Redtape sneakers</h3>
+<div class="price">₹944</div>
+<a href="https://fkrt.co/61H4uo"><button>Buy Now</button></a>
+</div>
+
+<div class="card">
+<img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/f/l/q/-original-imahan4bhwmu24ua.jpeg?q=90">
+<h3>redtape sneakers</h3>
+<div class="price">₹944</div>
+<a href="https://fkrt.co/PMTPzp"><button>Buy Now</button></a>
+</div>
+
+<div class="card">
+<img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/c/h/w/-original-imahg2t4f6ydz4ak.jpeg?q=90">
+<h3>Redtape white sneakers</h3>
+<div class="price">₹991</div>
+<a href="https://fkrt.co/SaPZE0"><button>Buy Now</button></a>
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/618NYmM50JL._SY741_.jpg">
+<h3>sleeve shirt</h3>
+<div class="price">₹512</div>
+<a href="https://amzn.to/3ZWBMv7"><button>Buy Now</button></a>
+</div>
+  
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/618NYmM50JL._SY741_.jpg">
+<h3>Slippers for Men</h3>
+<div class="price">₹389</div>
+<a href="https://m.media-amazon.com/images/I/51eAYF1Tf1L._SY695_.jpg"><button>Buy Now</button></a>
+</div>
+
+</div>
 
 <footer>
-© 2026 dailybestfinds21 | Affiliate Disclosure: We may earn commission.
-</footer>
-
-</body>
-</html>
+© 2026 DailyBestFinds21
