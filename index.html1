@@ -132,54 +132,55 @@ cards[i].style.display='none';
 <div class="products">
 
 <div class="card">
-<img src="shoe1.jpg">
+<img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/j/v/4/-original-imahgcsbgtyr3ygg.jpeg?q=90">
 <h3>Sneakers</h3>
-<div class="price">₹704</div>
-<a href="#"><button>Buy Now</button></a>
+<div class="price">₹909</div>
+<a href="https://fkrt.co/4EMFG7"><button>Buy Now</button></a>
 </div>
 
 <div class="card">
-<img src="watch.jpg">
-<h3>Men Watch</h3>
-<div class="price">₹499</div>
-<a href="#"><button>Buy Now</button></a>
+<img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/6/4/y/9-arow099-sneaker-09-9-onmac-enterprises-white-original-imahhhnuebfvywxs.jpeg?q=90">
+<h3>sneakers shoes</h3>
+<div class="price">₹498</div>
+<a href="https://fkrt.co/8b3oBT"><button>Buy Now</button></a>
 </div>
 
 <div class="card">
-<img src="bag.jpg">
-<h3>Handbag</h3>
-<div class="price">₹599</div>
-<a href="#"><button>Buy Now</button></a>
+<img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/6/3/e/-original-imahgaz5fzfzz5js.jpeg?q=90">
+<h3>Redtape sneakers</h3>
+<div class="price">₹944</div>
+<a href="https://fkrt.co/61H4uo"><button>Buy Now</button></a>
 </div>
 
 <div class="card">
-<img src="heels.jpg">
-<h3>Heels</h3>
-<div class="price">₹799</div>
-<a href="#"><button>Buy Now</button></a>
+<img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/f/l/q/-original-imahan4bhwmu24ua.jpeg?q=90">
+<h3>redtape sneakers</h3>
+<div class="price">₹944</div>
+<a href="https://fkrt.co/PMTPzp"><button>Buy Now</button></a>
 </div>
 
 <div class="card">
-<img src="toy.jpg">
-<h3>Kids Toy</h3>
-<div class="price">₹299</div>
-<a href="#"><button>Buy Now</button></a>
+<img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/shoe/c/h/w/-original-imahg2t4f6ydz4ak.jpeg?q=90">
+<h3>Redtape white sneakers</h3>
+<div class="price">₹991</div>
+<a href="https://fkrt.co/SaPZE0"><button>Buy Now</button></a>
 </div>
 
 <div class="card">
-<img src="bag2.jpg">
-<h3>School Bag</h3>
-<div class="price">₹499</div>
-<a href="#"><button>Buy Now</button></a>
+<img src="https://m.media-amazon.com/images/I/618NYmM50JL._SY741_.jpg">
+<h3>sleeve shirt</h3>
+<div class="price">₹512</div>
+<a href="https://amzn.to/3ZWBMv7"><button>Buy Now</button></a>
 </div>
-
+  
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/618NYmM50JL._SY741_.jpg">
+<h3>Slippers for Men</h3>
+<div class="price">₹389</div>
+<a href="https://m.media-amazon.com/images/I/51eAYF1Tf1L._SY695_.jpg"><button>Buy Now</button></a>
 </div>
 
 </div>
 
 <footer>
 © 2026 DailyBestFinds21
-</footer>
-
-</body>
-</html>
